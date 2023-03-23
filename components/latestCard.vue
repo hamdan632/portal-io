@@ -18,7 +18,6 @@
       </v-card-title>
       </span>
       </div>
-
     </v-img>
   </v-card>
 </template>
