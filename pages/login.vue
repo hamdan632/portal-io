@@ -2,17 +2,18 @@
   <v-app>
     <v-main>
       <v-container fluid fill-height>
-        <v-row justify="center" align="center">
+        <v-row justify="center" align="center" >
           <v-col cols="12" class="text-center">
-            <v-img :src="logo" width="200" height="200" @click="playAnimation" class="animated-logo"></v-img>
             <!-- Replace logo with your own logo image source -->
           </v-col>
           <v-col cols="12" class="text-center">
+            <v-img src="/logo.svg" width="200" height="200" @click="playAnimation" class="animated-logo ml-auto mr-auto mb-5"></v-img>
+
             <h1 class="display-1">Welcome to Topal</h1>
           </v-col>
-          <v-col cols="12" md="8" lg="6">
-            <v-form>
-              <v-text-field label="Email" v-model="email" required></v-text-field>
+          <v-col cols="12" md="6" lg="4">
+            <v-form max-width="100">
+              <v-text-field  label="Email" v-model="email" required></v-text-field>
             </v-form>
           </v-col>
           <v-col cols="12" class="text-center">
@@ -29,7 +30,7 @@
 
 <script>
 export default {
-  layout: 'empty',
+  layout: 'login',
   data() {
     return {
       logo: "/logo.gif", // Replace with your own logo image source

@@ -1,18 +1,27 @@
 <template>
   <v-app dark>
     <v-navigation-drawer
+      color="black"
       v-model="drawer"
       :mini-variant="right"
       :clipped="clipped"
       expand-on-hover
       app
     >
-      <v-img
-        height="100"
-        width="100"
-        src="/v.png">
-      </v-img>
       <v-list>
+        <v-list-item
+          class="d-flex justify-center mt-5 mb-10">
+          <v-img
+            class="mr-auto"
+            height="70"
+            max-width="70"
+            src="/logo.svg">
+          </v-img>
+          <v-card-title class="mr-auto">
+            Portal IO
+          </v-card-title>
+        </v-list-item>
+
         <v-list-item
           v-for="(item, i) in items"
           :key="i"
@@ -59,6 +68,7 @@
       </v-container>
     </v-main>
     <v-navigation-drawer
+      color="black"
       :mini-variant="right"
       v-model="drawer"
       right

@@ -261,4 +261,13 @@ export default {
 .img-circle {
   border-radius: 50%;
 }
+.light-theme {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.dark-theme {
+  background-color: #111;
+  color: #fff;
+}
 </style>
