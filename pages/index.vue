@@ -1,14 +1,5 @@
 <template>
       <v-container>
-        <v-card
-          class="ma-2 mb-10 ml-auto mr-auto sticky-card" width="60%">
-          <input
-            v-model="search"
-            class="search-field"
-            type="search"
-            placeholder="Search profiles, champions, agents, legends, and more!"
-            style="background-color: lightgrey; color: black;">
-        </v-card>
           <v-row width="70%" class="d-flex justify-center mt-10 mb-10 after-sticky">
             <div v-for="card in cards" :key="card.id" >
               <game-card :title="card.title" :image-url="card.url">

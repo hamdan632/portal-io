@@ -36,14 +36,13 @@
       style="background-color: #121212"
     >
       <v-text-field
-        v-if="showSearchTop"
-        light
+        dark
         filled
         dense
         color="black"
-        background-color="light-grey"
-        style=" max-height: 30px; max-width: 40%; margin-left: 500px"
+        style=" max-height: 40px; max-width: 15%;"
         v-model="search"
+        :rounded="rounded"
         :placeholder="searchPlaceholder"
         :clearable="clearable"
         :outlined="outlined"
@@ -53,42 +52,9 @@
       ></v-text-field>
 
       <v-spacer />
-      <v-btn
-        text
-        style="background-color: blue"
-        class="mr-2 ml-auto"
-        @click="$router.push('/login')"
-      >
-        <v-icon>mdi-account</v-icon>
-        login
-      </v-btn>
-      <v-btn
-        style="background-color: #a90808"
-        text
-        class="mr-2"
-      >
-        <v-icon>mdi-arrow-collapse-down</v-icon>
-        Download
-      </v-btn>
     </v-app-bar>
     <v-main>
       <v-container>
-          <v-text-field
-            light
-            class="ml-auto mr-auto"
-            filled
-            color="black"
-            background-color="light-grey"
-            style=" max-height: 60px; max-width: 50%"
-            v-if="showSearch"
-            v-model="search"
-            :placeholder="searchPlaceholder"
-            :clearable="clearable"
-            :outlined="outlined"
-            :solo="solo"
-            :append-icon="searchIcon"
-            @keydown.native.enter="submitSearch"
-          ></v-text-field>
         <Nuxt />
       </v-container>
     </v-main>
@@ -186,7 +152,7 @@ export default {
       color: "primary",
       elevation: 2,
       search: "",
-      searchPlaceholder: "Search profiles, champions, agends, legends, and more!",
+      searchPlaceholder: "Search",
       clearable: true,
       outlined: true,
       rounded: true,
@@ -234,7 +200,7 @@ export default {
         this.elevation = 2;
         this.showSearchTop = true;
       } else {
-          this.showSearchTop = false
+        this.showSearchTop = false
       }
     });
   }

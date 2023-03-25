@@ -4,6 +4,7 @@
     class="ma-3"
     height="405"
     max-width="305"
+    @click="$router.push('/gameStats')"
   >
     <v-img
       :elevation="2"
@@ -11,13 +12,17 @@
       class="hoverable-image mr-auto ml-auto mt-1 cursor-pointer"
       src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
       max-width="300" height="400">
-      <div >
+      <v-card-title
+        class="mt-10 ml-2 mr-2" style="background-color: #393939; opacity: 0.9; max-height: 80px">
       <span>
-        <v-card-title class="d-flex justify-center mt-auto">
-        Hello to the future
-      </v-card-title>
+        <v-card-text class="d-flex justify-center mt-auto">
+          <v-icon class="ma-1">mdi-checkbox-marked-outline</v-icon>
+          <span class="mt-1">
+                    Hello to the future
+          </span>
+      </v-card-text>
       </span>
-      </div>
+      </v-card-title>
     </v-img>
   </v-card>
 </template>

@@ -5,6 +5,7 @@
       class="ma-2"
       height="250"
       max-width="180"
+      @click="$router.push('/gameDetail')"
     >
       <v-img
         height="200"
