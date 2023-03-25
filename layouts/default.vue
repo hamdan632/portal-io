@@ -101,7 +101,9 @@
       width="250"
     >
       <v-list dense>
-        <v-list-item>
+        <v-list-item
+          class="cursor-pointer"
+          @click="$router.push('/login')">
           <v-list-item-action>
             <v-icon>mdi-account</v-icon>
           </v-list-item-action>
@@ -109,7 +111,10 @@
             <v-list-item-title>Guest Account</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item>
+        <v-list-item
+          class="cursor-pointer"
+          @click=""
+        >
           <v-list-item-action>
             <v-icon>mdi-cloud-download</v-icon>
           </v-list-item-action>
@@ -128,7 +133,11 @@
             <v-list-item-title>Settings</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item>
+        <v-list-item
+          style="background-color: #5b5b36"
+          class="cursor-pointer"
+          @click="$router.push('/wallet')"
+        >
           <v-list-item-action>
             <v-icon>mdi-account-star</v-icon>
           </v-list-item-action>
@@ -137,7 +146,10 @@
           </v-list-item-content>
         </v-list-item>
 
-        <v-list-item>
+        <v-list-item
+          class="cursor-pointer"
+          @click="$router.push('/login')"
+        >
           <v-list-item-action>
             <v-icon>mdi-account-plus</v-icon>
           </v-list-item-action>
