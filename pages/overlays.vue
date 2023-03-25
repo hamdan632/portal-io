@@ -4,11 +4,11 @@
     <v-tabs centered v-model="tab" color="primary" slider-color="accent">
       <v-tab v-for="(tab, index) in tabs" :key="index">{{ tab.title }}</v-tab>
       <v-tab-item v-for="(tab, index) in tabs" :key="index">
-        <v-card>
-          <v-card-title>{{ tab.title }}</v-card-title>
-          <v-card-text>
-            <p>Content for {{ tab.title }} overlay tab goes here.</p>
-          </v-card-text>
+        <v-card v-if="tab.title === 'All Games'">
+          <v-card-title>
+            <v-icon>mdi-account</v-icon>
+            <span class="ml-2">Leagues of Legends</span>
+          </v-card-title>
         </v-card>
       </v-tab-item>
     </v-tabs>

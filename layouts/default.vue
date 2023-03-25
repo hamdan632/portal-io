@@ -1,18 +1,28 @@
 <template>
   <v-app dark>
     <v-navigation-drawer
+      color="black"
       v-model="drawer"
       :mini-variant="right"
-      :clipped="clipped"
+      height="100%"
       expand-on-hover
       app
     >
-      <v-img
-        height="100"
-        width="100"
-        src="/v.png">
-      </v-img>
+
+
       <v-list>
+        <v-list-item
+          class="d-flex justify-center mt-5 mb-10">
+          <v-img
+            class="mr-auto"
+            height="70"
+            max-width="70"
+            src="/logo.svg">
+          </v-img>
+          <v-card-title class="mr-auto">
+            Portal IO
+          </v-card-title>
+        </v-list-item>
         <v-list-item
           v-for="(item, i) in items"
           :key="i"
@@ -36,18 +46,15 @@
       style="background-color: #121212"
     >
       <v-text-field
+        class=""
         v-if="showSearchTop"
         light
-        filled
         dense
-        color="black"
-        background-color="light-grey"
         style=" max-height: 30px; max-width: 40%; margin-left: 500px"
         v-model="search"
         :placeholder="searchPlaceholder"
-        :clearable="clearable"
-        :outlined="outlined"
         :solo="solo"
+        :clearable="clearable"
         :append-icon="searchIcon"
         @keydown.native.enter="submitSearch"
       ></v-text-field>
@@ -76,10 +83,7 @@
           <v-text-field
             light
             class="ml-auto mr-auto"
-            filled
-            color="black"
-            background-color="light-grey"
-            style=" max-height: 60px; max-width: 50%"
+            style=" max-height: 60px; max-width: 35%; margin-top: 200px; border-radius: 10px"
             v-if="showSearch"
             v-model="search"
             :placeholder="searchPlaceholder"
@@ -95,6 +99,7 @@
     <v-navigation-drawer
       :mini-variant="right"
       v-model="drawer"
+      color="black"
       right
       app
       expand-on-hover
@@ -252,3 +257,8 @@ export default {
   }
 }
 </script>
+<style>
+.img-circle {
+  border-radius: 50%;
+}
+</style>
