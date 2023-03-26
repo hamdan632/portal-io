@@ -98,7 +98,7 @@
     </v-main>
     <v-navigation-drawer
       :mini-variant="right"
-      v-model="drawer"
+      v-model="rightDrawer"
       color="black"
       right
       app
@@ -108,12 +108,59 @@
       <v-list dense>
         <v-list-item
           class="cursor-pointer"
-          @click="$router.push('/login')">
+          @click="">
           <v-list-item-action>
-            <v-icon>mdi-account</v-icon>
+            <v-icon class="" >mdi-account</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title>Guest Account</v-list-item-title>
+            <v-menu offset-y>
+              <template v-slot:activator="{ on }" @click.stop="rightDrawer = !rightDrawer">
+                  <v-list-item-title class="" v-on="on">Guest Account</v-list-item-title>
+              </template>
+              <v-list>
+                <v-list-item @click="">
+                  <v-list-item-icon>
+                    <v-icon>mdi-account-plus</v-icon>
+                  </v-list-item-icon>
+                  <v-list-item-content>
+                    <v-list-item-title>Sign Up for Account</v-list-item-title>
+                  </v-list-item-content>
+                </v-list-item>
+                <v-list-item @click="">
+                  <v-list-item-icon>
+                    <v-icon>mdi-translate</v-icon>
+                  </v-list-item-icon>
+                  <v-list-item-content>
+                    <v-list-item-title>Language: English</v-list-item-title>
+                  </v-list-item-content>
+                </v-list-item>
+                <v-list-item @click="">
+                  <v-list-item-icon>
+                    <v-icon>mdi-reload</v-icon>
+                  </v-list-item-icon>
+                  <v-list-item-content>
+                    <v-list-item-title>Reload</v-list-item-title>
+                  </v-list-item-content>
+                </v-list-item>
+                <v-list-item @click="">
+                  <v-list-item-icon>
+                    <v-icon>mdi-shield-lock</v-icon>
+                  </v-list-item-icon>
+                  <v-list-item-content>
+                    <v-list-item-title>Privacy Policy</v-list-item-title>
+                  </v-list-item-content>
+                </v-list-item>
+                <v-list-item @click="">
+                  <v-list-item-icon>
+                    <v-icon>mdi-login</v-icon>
+                  </v-list-item-icon>
+                  <v-list-item-content>
+                    <v-list-item-title>Login</v-list-item-title>
+                  </v-list-item-content>
+                </v-list-item>
+              </v-list>
+            </v-menu>
+
           </v-list-item-content>
         </v-list-item>
         <v-list-item
@@ -239,6 +286,9 @@ export default {
     }
   },
   methods: {
+    openRightDrawer(){
+      this.rightDrawer = !this.rightDrawer
+    },
 
     submitSearch() {
       console.log("Search submitted:", this.search);
