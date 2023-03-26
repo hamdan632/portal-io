@@ -14,7 +14,7 @@
                 <v-icon>mdi-account</v-icon>
                 <span class="ml-2">Leagues of Legends</span>
               </v-card-title>
-              <v-row>
+              <v-row class="screen-back-color">
                 <single-game-detail></single-game-detail>
                 <single-game-detail></single-game-detail>
                 <single-game-detail></single-game-detail>
@@ -27,7 +27,7 @@
                 <v-icon>mdi-account</v-icon>
                 <span class="ml-2">Valorant</span>
               </v-card-title>
-              <v-row>
+              <v-row class="screen-back-color">
                 <single-game-detail></single-game-detail>
                 <single-game-detail></single-game-detail>
                 <single-game-detail></single-game-detail>
@@ -40,7 +40,7 @@
                 <v-icon>mdi-account</v-icon>
                 <span class="ml-2">CS:GO</span>
               </v-card-title>
-              <v-row>
+              <v-row class="screen-back-color">
                 <single-game-detail></single-game-detail>
                 <single-game-detail></single-game-detail>
                 <single-game-detail></single-game-detail>
@@ -53,7 +53,7 @@
                 <v-icon>mdi-account</v-icon>
                 <span class="ml-2">Apex Legends</span>
               </v-card-title>
-              <v-row>
+              <v-row class="screen-back-color">
                 <single-game-detail></single-game-detail>
                 <single-game-detail></single-game-detail>
                 <single-game-detail></single-game-detail>
@@ -66,7 +66,7 @@
                 <v-icon>mdi-account</v-icon>
                 <span class="ml-2">Teamfight Tactics</span>
               </v-card-title>
-              <v-row>
+              <v-row class="screen-back-color">
                 <single-game-detail></single-game-detail>
                 <single-game-detail></single-game-detail>
                 <single-game-detail></single-game-detail>
@@ -77,7 +77,7 @@
               </v-row>
             </v-card>
             <v-card v-if="tab.title === 'Leagues of Legends'">
-              <v-row class="mt-10">
+              <v-row class="mt-10 screen-back-color">
                 <single-game-detail></single-game-detail>
                 <single-game-detail></single-game-detail>
                 <single-game-detail></single-game-detail>
@@ -90,7 +90,7 @@
               </v-row>
             </v-card>
             <v-card v-if="tab.title === 'Teamfight Tactics'">
-              <v-row class="mt-10">
+              <v-row class="mt-10 screen-back-color">
                 <single-game-detail></single-game-detail>
                 <single-game-detail></single-game-detail>
                 <single-game-detail></single-game-detail>
@@ -103,7 +103,7 @@
               </v-row>
             </v-card>
             <v-card v-if="tab.title === 'Valorant'">
-              <v-row class="mt-10">
+              <v-row class="mt-10 screen-back-color">
                 <single-game-detail></single-game-detail>
                 <single-game-detail></single-game-detail>
                 <single-game-detail></single-game-detail>
@@ -116,7 +116,7 @@
               </v-row>
             </v-card>
             <v-card v-if="tab.title === 'CS:GO'">
-              <v-row class="mt-10">
+              <v-row class="mt-10 screen-back-color">
                 <single-game-detail></single-game-detail>
                 <single-game-detail></single-game-detail>
                 <single-game-detail></single-game-detail>

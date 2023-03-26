@@ -1,22 +1,21 @@
 <template>
   <v-container>
-    <v-tabs v-model="tab" color="primary" slider-color="accent">
-      <v-tab v-for="(tab, index) in tabs" :key="index">{{ tab.title }}</v-tab>
-      <v-tab-item v-for="(tab, index) in tabs" :key="index">
-        <v-card>
-          <v-card-title>{{ tab.title }}</v-card-title>
-          <v-card-text>
-            <p>Content for {{ tab.title }} settings tab goes here.</p>
-          </v-card-text>
-        </v-card>
+    <v-tabs centered v-model="tab" color="primary" slider-color="accent">
+      <v-tab  v-for="(tab, index) in tabs" :key="index">{{ tab.title }}</v-tab>
+      <v-tab-item class="mt-10"  v-for="(tab, index) in tabs" :key="index">
+          <general-settings v-if="tab.title === 'General settings'"></general-settings>
       </v-tab-item>
     </v-tabs>
   </v-container>
 </template>
 
 <script>
+import generalSettings from "../components/generalSettings.vue";
 export default {
   layout: 'detailsPage',
+  components:{
+    generalSettings
+  },
   data() {
     return {
       tab: null,
