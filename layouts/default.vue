@@ -1,5 +1,5 @@
 <template>
-  <v-app >
+  <v-app color="black">
     <v-navigation-drawer
       color="black"
       v-model="drawer"
@@ -40,10 +40,10 @@
       </v-list>
     </v-navigation-drawer>
     <v-app-bar
+      color="black"
       :clipped-left="clipped"
       fixed
       app
-      style="background-color: #121212"
     >
       <v-text-field
         class=""
@@ -82,7 +82,7 @@
       <v-container>
           <v-text-field
             dark
-            class="ml-auto mr-auto"
+            class="ml-auto mr-auto "
             style=" max-height: 60px; max-width: 35%; margin-top: 100px; border-radius: 10px"
             v-if="showSearch"
             v-model="search"
@@ -310,6 +310,9 @@ export default {
 }
 </script>
 <style>
+.theme--dark.v-application{
+ background-color: black;
+}
 .img-circle {
   border-radius: 50%;
 }
@@ -324,5 +327,8 @@ export default {
 }
 .search-section {
   background-color: black;
+}
+.light-grey-text input {
+  color: #bdbdbd;
 }
 </style>
