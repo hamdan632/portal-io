@@ -1,5 +1,5 @@
 <template>
-  <v-app dark>
+  <v-app >
     <v-navigation-drawer
       color="black"
       v-model="drawer"
@@ -48,9 +48,9 @@
       <v-text-field
         class=""
         v-if="showSearchTop"
-        light
+        dark
         dense
-        style=" max-height: 30px; max-width: 40%; margin-left: 500px"
+        style=" max-height: 30px; max-width: 40%; margin-left: 590px"
         v-model="search"
         :placeholder="searchPlaceholder"
         :solo="solo"
@@ -62,7 +62,7 @@
       <v-spacer />
       <v-btn
         text
-        style="background-color: blue"
+        style="background-color: #1e1e1e"
         class="mr-2 ml-auto"
         @click="$router.push('/login')"
       >
@@ -81,9 +81,9 @@
     <v-main>
       <v-container>
           <v-text-field
-            light
+            dark
             class="ml-auto mr-auto"
-            style=" max-height: 60px; max-width: 35%; margin-top: 200px; border-radius: 10px"
+            style=" max-height: 60px; max-width: 35%; margin-top: 100px; border-radius: 10px"
             v-if="showSearch"
             v-model="search"
             :placeholder="searchPlaceholder"
@@ -296,6 +296,8 @@ export default {
     }
   },
   mounted() {
+    this.$vuetify.theme.isDark = true
+    this.$vuetify.theme.themes.dark.primary = '#000000'
     window.addEventListener("scroll", () => {
       if (window.scrollY > 0) {
         this.elevation = 2;
@@ -319,5 +321,8 @@ export default {
 .dark-theme {
   background-color: #111;
   color: #fff;
+}
+.search-section {
+  background-color: black;
 }
 </style>

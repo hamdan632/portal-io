@@ -3,12 +3,12 @@
     <v-card
       style="background-color: #121212"
       class="ma-2"
-      height="250"
-      max-width="180"
+      height="300"
+      max-width="200"
       @click="$router.push('/gameDetail')"
     >
       <v-img
-        height="200"
+        height="230"
         width="95%"
         :src="imageUrl"
         :elevation="2"
